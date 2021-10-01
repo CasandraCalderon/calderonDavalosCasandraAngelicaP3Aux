@@ -13,6 +13,11 @@ const poll = {
 
 const registerNewAnswer = () =>{
     const newList = poll.options.map(function(codes){return (codes + '\n')});
-    prompt (`${poll.question} \n ${newList.toString().replace(/,/g, "")}`, "")
+    const number = prompt (`${poll.question} \n ${newList.toString().replace(/,/g, "")}`, "");
+    (number < poll.options.length && number >= 0) ? 
+    poll.answers[number] = poll.answers[number] +1 : console.log("Coloque un numero que se encuentre en las opciones");
+    console.log(poll.answers);
+    
 };
 registerNewAnswer();
+
