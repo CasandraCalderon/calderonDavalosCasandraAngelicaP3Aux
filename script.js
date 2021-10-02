@@ -16,10 +16,10 @@ const registerNewAnswer = () =>{
     const number = prompt (`${poll.question} \n ${newList.toString().replace(/,/g, "")}`, "");
     (number < poll.options.length && number >= 0) ? 
     poll.answers[number] = poll.answers[number] +1 : console.log("Coloque un numero que se encuentre dentro de las opciones");
-    //console.log(poll.answers);
     const displayResults = (type) => {
         return (`Los resultados de la encuesta son ${type.toString()} respectivamente`);
     };
+    return (console.log(displayResults(poll.answers)));
     
 };
 
