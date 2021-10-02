@@ -20,7 +20,15 @@ const poll = {
     }   
 };
 
+const arr1 = Object.create(poll);
+arr1.answers = [5, 2, 3];
+console.log(arr1.answers);
+arr1.registerNewAnswer();
 
+const arr2 = Object.create(poll);
+arr2.answers = [1, 5, 3, 9, 6, 1];
+console.log(arr2.answers);
+arr1.registerNewAnswer();
 
 
 
